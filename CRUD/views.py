@@ -5,4 +5,4 @@ def index(request):
 
 
 def ListaEmpleado(request):
-    return render(request,'empleado/ListaEmpleado.html')
+    return render(request,'ListaEmpleado.html')
