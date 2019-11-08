@@ -18,11 +18,13 @@ class Encargado(models.Model):
         return self.nombre
 
 class HorarioCuidado(models.Model):
+    descripcion = models.CharField(max_length=200)
     fecha_cuidado = models.DateField()
     animal = models.ForeignKey(Animal, on_delete=models.CASCADE)
     encargado = models.ForeignKey(Encargado, on_delete=models.CASCADE)
     def __str__(self):
-        return self.encargado.str()
+        return self.descripcion
+
 
 class HorarioCuidadoInLine(admin.TabularInline):
     model = HorarioCuidado
