@@ -22,21 +22,25 @@
                    <table class="table">
                      <thead class=" text-primary">
                        <th>ID</th>
-                       <th>Nombre</th>
-                       <th>Apellido</th>
-                       <th>Operaciones</th>
+                       <th>Descripcion</th>
+                       <th>Fecha Cuidado</th>
+                       <th>Encargado</th>
+                       <th>Animal</th>
                      </thead>
                      <tbody>
-                       {% for emp in encargado %}
+                       {% for hc in horariocuidado %}
                        <tr>
                          <td>
-                           {{ emp.id }}
+                           {{ hc.id }}
                          </td>
                          <td>
-                           {{ emp.nombre }}
+                           {{ hc.descripcion }}
                          </td>
                          <td>
-                           {{ emp.apellido }}
+                           {{ hc.encargado }}
+                         </td>
+                         <td>
+                           {{ hc.animal }}
                          </td>
                          <td>
                            <li style="list-style-type:none">

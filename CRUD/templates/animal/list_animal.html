@@ -7,10 +7,10 @@
            <div class="col-md-12">
              <div class="card">
                <div class="card-header card-header-primary">
-                 <h4 class="card-title ">Listado de Empleados Asignados para Cuidado de Zoologico</h4>
-                 <p class="card-category"> Informacion de los Empleados</p>
+                 <h4 class="card-title ">Listado de Animales Registrados en el Sistema</h4>
+                 <p class="card-category"> Informacion Animales</p>
                  <li style="list-style-type:none; float:right;">
-                   <a href="{% url 'NuevoEmpleado' %}">
+                   <a href="#">
                      <i class="material-icons"
                      style="color: white;">
                        add_circle_outline</i>
@@ -23,20 +23,28 @@
                      <thead class=" text-primary">
                        <th>ID</th>
                        <th>Nombre</th>
-                       <th>Apellido</th>
+                       <th>Tipo</th>
+                       <th>Edad</th>
+                       <th>Cantidad</th>
                        <th>Operaciones</th>
                      </thead>
                      <tbody>
-                       {% for emp in encargado %}
+                       {% for a in animal %}
                        <tr>
                          <td>
-                           {{ emp.id }}
+                           {{ a.id }}
                          </td>
                          <td>
-                           {{ emp.nombre }}
+                           {{ a.nombre }}
                          </td>
                          <td>
-                           {{ emp.apellido }}
+                           {{ a.tipo }}
+                         </td>
+                         <td>
+                           {{ a.edad }}
+                         </td>
+                         <td>
+                           {{ a.cantidad }}
                          </td>
                          <td>
                            <li style="list-style-type:none">
