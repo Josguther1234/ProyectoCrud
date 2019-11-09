@@ -7,3 +7,8 @@ class EncargadoForm(forms.ModelForm):
     class Meta:
         model = Encargado
         fields = ('nombre', 'apellido',)
+
+class AnimalForm(forms.ModelForm):
+    class Meta:
+        model = Animal
+        fields = ('nombre', 'tipo', 'edad', 'cantidad',)

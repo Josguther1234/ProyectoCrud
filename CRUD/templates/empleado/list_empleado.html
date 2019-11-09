@@ -10,7 +10,7 @@
                  <h4 class="card-title ">Listado de Empleados Asignados para Cuidado de Zoologico</h4>
                  <p class="card-category"> Informacion de los Empleados</p>
                  <li style="list-style-type:none; float:right;">
-                   <a href="{% url 'NuevoEmpleado' %}">
+                   <a href="/nuevoE/">
                      <i class="material-icons"
                      style="color: white;">
                        add_circle_outline</i>
@@ -43,7 +43,7 @@
                              <a href="#">
                                <i class="material-icons">create</i>
                              </a>
-                             <a href="#">
+                             <a href="{% url 'EliminarEmpleado' pk=emp.id %}">
                              <i class="material-icons">delete_outline</i>
                               </a>
                            </li>
